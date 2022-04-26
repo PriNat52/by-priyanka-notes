@@ -6,9 +6,18 @@ export const api = (() => {
     const getTodo = () => fetch([baseUrl, path].join("/")).then((response) => response.json());
 
     const getId = (id) =>
-    fetch([baseUrl, path, id].join("/")).then((response) =>
+    fetchJsonp([baseUrl, path, id].join("/")).then((response) =>
       response.json()
     );
+
+    const addList = (newlist) =>
+    fetch([baseUrl, path].join("/"), {
+      method: "POST",
+      body: JSON.stringify(newlist),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      }
+    }).then((response) => response.json());
 
     const moveList = (id) => fetch([baseUrl, path, id].join("/"), {
         method: "POST",
@@ -31,20 +40,11 @@ export const api = (() => {
     Http DELETE: http://localhost:3000/todos/{id}, to delete todo data with specific id
     */
 
-    const addList = (newlist) =>
-    fetch([baseUrl, path].join("/"), {
-      method: "POST",
-      body: JSON.stringify(newlist),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    }).then((response) => response.json());
-
     return{
         getTodo,
         getId,
-        deleteList,
         addList,
+        deleteList,
         moveList,
     };
 
