@@ -31,19 +31,26 @@ body,html{
 
 form{
     text-align: center;
+    margin-top: 20px;
     margin:20px;
-    
 }
+
 #Submit{
-    background-color: rgb(96, 96, 247);
+    background-color: #008cba;
     border-radius: 25rem;
+}
+.input, #Submit{
+
+    height: 30px;
+    line-height: 30px;
+    width: auto;
 }
 ul{
     background-color: rgb(202, 193, 193);
-    overflow:scroll;
+    overflow:auto;
 }
 ul li {
-    margin:10px;
+    /* margin:10px; */
 
     height: 30px;
     line-height: 30px;
@@ -53,6 +60,9 @@ ul li {
     display: flex;
     /* justify-content: space-between; */
     background-color:rgb(251, 229, 203);
+}
+li:hover{
+    background-color: rgba(176, 110, 110, 0.876);
 }
 
 #editbtn, #delbtn, #movebtn{

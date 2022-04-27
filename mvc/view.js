@@ -9,6 +9,7 @@ export const view = (() => {
     inputBox: ".input",
     submitbtn: "#Submit",
     section: ".list_content",
+    textinput: ".inbtn",
   };
   const render = (ele, tmp) => {
     ele.innerHTML = tmp;
@@ -20,10 +21,10 @@ export const view = (() => {
       if (list.isCompleted === false) {
         tmp += `
                 <li>
-                    <span>${list.content}</span>
+                    <span><input type="text" class="inbtn ${list.id}" hidden/>${list.content}</span>
                     <button class="editbtn ${list.id}">Edit</button>
                     <button class="delbtn ${list.id}">Delete</button>
-                    <button class="movbtn ${list.id}">Move</button>
+                    <button class="movbtn ${list.id}">Move >></button>
                 </li>
             `;
       }
@@ -37,10 +38,10 @@ export const view = (() => {
       if (list.isCompleted === true) {
         tmp += `
                 <li>
-                    <span>${list.content}</span>
-                    <button class="editbtn ${list.id}">E</button>
-                    <button class="delbtn ${list.id}">D</button>
-                    <button class="movbtn ${list.id}">M</button>
+                    <button class="movbtn ${list.id}"><< Move</button>
+                    <span><input type="text" class="inbtn ${list.id}" hidden/>${list.content}</span>
+                    <button class="editbtn ${list.id}">Edit</button>
+                    <button class="delbtn ${list.id}">Delete</button>
                 </li>
             `;
       }

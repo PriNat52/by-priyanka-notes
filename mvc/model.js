@@ -3,24 +3,23 @@
 import { api } from "./api.js";
 import { view } from "./view.js";
 
-/*
-{
-    "content": "Build two lists, pending list and completed list",
-    "isCompleted": true,
-    "id": 3
-  }
-*/
 export const model = ((Api, View) => {
   class ListContent {
     constructor(content) {
       this.content = content;
       this.isCompleted = false;
-    //   this.id = 16;
     }
   }
 
+  class Content{
+    constructor(contents) {
+        this.content = contents;
+        this.isCompleted = true;
+      }
+  }
+
   class State {
-    #listitems = [];
+    #listitems = []; #content ={} ; #isCompleted = {};
 
     get listitems() {
       return this.#listitems;
@@ -50,5 +49,6 @@ export const model = ((Api, View) => {
     addList,
     State,
     ListContent,
+    Content,
   };
 })(api, view);
