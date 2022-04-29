@@ -38,7 +38,7 @@ export const view = (() => {
       if (list.isCompleted === true) {
         tmp += `
                 <li>
-                    <button class="movbtn ${list.id}"><< Move</button>
+                    <button class="movebtn ${list.id}"><< Move</button>
                     <span><input type="text" class="inbtn ${list.id}" hidden/>${list.content}</span>
                     <button class="editbtn ${list.id}">Edit</button>
                     <button class="delbtn ${list.id}">Delete</button>
