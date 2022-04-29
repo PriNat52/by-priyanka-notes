@@ -103,7 +103,7 @@ export const controller = ((Model, View) => {
   const init = () => {
     Model.getTodo().then((listitems) => {
       console.log(listitems);
-      state.listitems = listitems;
+      state.listitems = listitems.reverse();
     });
   };
 
