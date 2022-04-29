@@ -9,7 +9,7 @@ Blue: #008cba
   margin: 0;
   padding: 0;
   align-items: center;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 body {
@@ -34,8 +34,8 @@ html {
   font-family: "Tangerine", serif;
 }
 
-body{
-    margin: 5px;
+body {
+  margin: 5px;
 }
 .list_content {
   display: flex;
@@ -44,14 +44,13 @@ body{
 form {
   margin: 2.5%;
   padding: 15px;
-  height: fit-content;
   width: max-content;
 
   justify-content: center;
   text-align: center;
-  background-color: #b7b7b7;
+  background-color: rgba(0, 0, 0, 0.5);
 
-  box-shadow: 5px 5px 5px 5px #5e5d5d;
+  box-shadow: 5px 5px 5px 5px #a4a3a3;
   border-radius: 15px;
 }
 
@@ -80,17 +79,18 @@ header:active {
   margin-right: 10px;
 }
 .movbtn:hover {
-    font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 .movebtn {
   background-color: #62a964;
   border-radius: 5px;
   float: left;
+  margin-left: 10px;
   margin-right: 10px;
 }
 .movebtn:hover {
-    font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 .delbtn {
@@ -98,9 +98,10 @@ header:active {
   border-radius: 5px;
   float: right;
   margin-right: 10px;
+  margin-left: 10px;
 }
 .delbtn:hover {
-    font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 .editbtn {
@@ -110,7 +111,7 @@ header:active {
   margin-right: 10px;
 }
 .editbtn:hover {
-    font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 .input,
@@ -121,20 +122,41 @@ header:active {
 }
 
 ul {
+  padding: 3px;
   overflow: hidden;
 }
 ul li {
-  height: 30px;
+  height: 60px;
   line-height: 30px;
   width: 100%;
 
-  font-size: 18px;
+  text-transform: capitalize;
   justify-content: center;
-  background: linear-gradient(to right, #f3c474, #ddc89d);
+  background: linear-gradient(to right, #72f0e1, #ddc89d);
 }
 
 #pending,
 #completed {
   margin: 10px;
   border-radius: 5px;
+}
+
+.movbtn svg {
+  width: 25px;
+  height: 1.1em;
+}
+
+.movebtn svg {
+  width: 25px;
+  height: 1.1em;
+}
+
+.editbtn svg {
+  width: 25px;
+  height: 1.1em;
+}
+
+.delbtn svg {
+  width: 25px;
+  height: 1.1em;
 }

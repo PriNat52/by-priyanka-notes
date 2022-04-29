@@ -24,7 +24,7 @@ export const controller = ((Model, View) => {
 
     moveBtn.addEventListener("click", (event) => {
       const [className, id] = event.target.className.split(" ");
-      if (className === "movbtn") {
+      if (className == "movbtn") {
         state.listitems
           .filter((ele) => +ele.id === +id)
           .forEach((obj) => (obj.isCompleted = true));
@@ -41,7 +41,7 @@ export const controller = ((Model, View) => {
 
     moveBtn.addEventListener("click", (event) => {
       const [className, id] = event.target.className.split(" ");
-      if (className === "movbtn") {
+      if (className == "movebtn") {
         const result = state.listitems.filter((ele) => +ele.id === +id);
         let res = new Model.ListContent(result[0].content);
         Model.moveList(id, res);
