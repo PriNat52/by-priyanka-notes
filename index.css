@@ -26,9 +26,8 @@ body {
     linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);
 }
 
-body,
-html {
-  width: 100vw;
+body {
+  width: 110vw;
   height: 100vh;
   align-items: center;
   font-family: "Tangerine", serif;
@@ -42,16 +41,32 @@ body {
 }
 
 form {
-  margin: 2.5%;
+  margin: 1%;
   padding: 15px;
-  width: max-content;
+  
+  height:100%;
+  width: 100%;
+  text-align: center;
+}
+label{
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+.pending_list, .completed_list{
+
+  margin: 8px;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
 
   justify-content: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(95, 95, 95, 0.5);
 
   box-shadow: 5px 5px 5px 5px #a4a3a3;
   border-radius: 15px;
+  overflow: visible;
+  display:inline;
 }
 
 header {
@@ -65,10 +80,13 @@ header:hover {
 header:active {
   font-size: 1.3rem;
 }
-
+#Input{
+  border: 1px solid rgb(24, 132, 214);
+  border-radius: 4px;
+}
 #Submit {
-  background-color: #2891b4;
-  border-radius: 15rem;
+  background-color:  #008cba;
+  border-radius: 10px;
   justify-content: space-around;
 }
 
@@ -127,12 +145,12 @@ ul {
 }
 ul li {
   height: 60px;
-  line-height: 30px;
+  /* line-height: 15px; */
   width: 100%;
 
   text-transform: capitalize;
   justify-content: center;
-  background: linear-gradient(to right, #72f0e1, #ddc89d);
+  background: linear-gradient(to right, #f1d8e5, #e8d7b5);
 }
 
 #pending,

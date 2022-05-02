@@ -29,6 +29,15 @@ export const api = (() => {
       },
     }).then((response) => response.json());
 
+    const editList = (id,newUpdate) =>
+    fetch([baseUrl, path, id].join("/"), {
+      method: "PUT",
+      body: JSON.stringify(newUpdate),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }).then((response) => response.json());
+
   const deleteList = (id) =>
     fetch([baseUrl, path, id].join("/"), {
       method: "DELETE",
@@ -47,5 +56,6 @@ export const api = (() => {
     addList,
     deleteList,
     moveList,
+    editList,
   };
 })();

@@ -50,28 +50,33 @@ export const controller = ((Model, View) => {
   };
  
   const editCompLists = () => {
-    const moveBtn = document.querySelector(View.domStr.completedlist);
-
-    moveBtn.addEventListener("click", (event) => {
+    const editBtn = document.querySelector(View.domStr.completedlist);
+    // console.log(editBtn.addEventListener("click", e => console.log(e)));
+    editBtn.addEventListener("click", (event) => {
       const [className, id] = event.target.className.split(" ");
-      if (className === "editbtn") {
-        const textbox = document.querySelector(View.domStr.textinput);
-        console.log(textbox.classList);
+
+      if (className == "editbtn") {
+        console.log(event);
+
+        // const textbox = document.querySelector(View.domStr.textinput);
+        // console.log(textbox.classList);
         console.log(id);
         let text = document.createElement("input");
         
-        // text.setAttribute("type","text");
+        // // text.setAttribute("type","text");
 
-        const result = state.listitems
-          .filter((ele) => +ele.id === +id);
-        let textNode = document.createTextNode(result[0].content);
-        text.appendChild(textNode);
+        // const result = state.listitems
+        //   .filter((ele) => +ele.id === +id);
+        // let textNode = document.createTextNode(result[0].content);
+        // text.appendChild(textNode);
         document.body.appendChild(text);
-        // event.target.previousSibling.setAttribute('contenteditable', 'true');
+        // // event.target.previousSibling.setAttribute('contenteditable', 'true');
         console.log(text);
         
         console.log(result[0].content);
       }
+      const textbox = document.querySelector(View.domStr.textinput);
+      console.log(textbox.classList);
     });
   };
 
