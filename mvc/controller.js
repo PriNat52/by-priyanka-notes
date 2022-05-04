@@ -60,7 +60,7 @@ export const controller = ((Model, View) => {
 
         // const textbox = document.querySelector(View.domStr.textinput);
         // console.log(textbox.classList);
-        console.log(id);
+        // console.log(id);
         let text = document.createElement("input");
         
         // // text.setAttribute("type","text");
